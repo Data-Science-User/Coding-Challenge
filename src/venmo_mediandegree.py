@@ -15,3 +15,5 @@ input_file = o
 for line in input_file:
     try: # extraction of timestamp, tweet text from json. If a unicode tweet is found triggers exception
         json = sj.loads(line.strip())
+
+        test
