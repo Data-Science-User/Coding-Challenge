@@ -10,12 +10,10 @@ from collections import Counter
 import random
 import numpy as np
 
-
+input_file = open(sys.argv[1])
 
 txt = urllib.urlopen(
     "https://raw.githubusercontent.com/InsightDataScience/coding-challenge/master/data-gen/venmo-trans.txt").read()
-
-input_file = open(sys.argv[1])
 
 for line in input_file:
     try: # extraction of timestamp, tweet text from json. If a unicode tweet is found triggers exception
@@ -23,8 +21,6 @@ for line in input_file:
         Created_time = json['Created_time']
         Target = json['Target']
         Actor = json['Actor']
-
-input_file = open(sys.argv[1])
 
 sys.argv = [w.replace('52801', '/Users/Chak/Documents/GitHub/Coding-Challenge/Venmo_input/Venmo.txt')
             .replace('52802', '/Users/Chak/Documents/GitHub/Coding-Challenge/Venmo_output/output1.txt')for w in sys.argv]
